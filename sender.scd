@@ -17,7 +17,7 @@ t.sendMsg("/led", 0)
 
 Pbind(
 	\dur, Prand([0.25, 0.125, 0.5, 0.0125, 0.025], inf), 
-	\led, Prand([1,0],inf),
+	\led, Pxrand([1,0],inf),
 	\play, Pfunc({|ev| t.sendMsg("/led", ev[\led])}),
 ).play
 
